@@ -10,3 +10,8 @@ for i in list:
 list = ["duck","gourd","spitz"]
 for i in list:
     print("{k}y Mc{k}face".format(k=i.title()))
+
+#5.8
+list = ["duck","gourd","spitz"]
+for i in list:
+    print(f"{i.title()}y Mc{i.title()}face")
