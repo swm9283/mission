@@ -1,17 +1,14 @@
-#mission
-#5.6
-list = ["duck","gourd","spitz"]
-for i in list:
-    k=i.title()
-    print("%sy Mc%sface" % (k,k))
-
-
-#5.7
-list = ["duck","gourd","spitz"]
-for i in list:
-    print("{k}y Mc{k}face".format(k=i.title()))
-
-#5.8
-list = ["duck","gourd","spitz"]
-for i in list:
-    print(f"{i.title()}y Mc{i.title()}face")
+#mission 2
+#문제 6.2
+guess_me = 7
+number = 10
+while True:
+    if number < guess_me:
+        print("too low")
+    elif number == guess_me:
+        print("found it")
+        break
+    else:
+        print("oops")
+        break
+    number = number +1
