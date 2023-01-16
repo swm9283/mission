@@ -1,14 +1,26 @@
-#mission 2
-#문제 6.2
-guess_me = 7
-number = 10
-while True:
+#mission2.
+#문제6.3
+guess_me = 9
+for number in range(10):
+    if guess_me >9:
+        print("oops")
+        break
     if number < guess_me:
         print("too low")
     elif number == guess_me:
-        print("found it")
+        print("found it",number)
         break
-    else:
-        print("oops")
-        break
-    number = number +1
+
+
+
+
+
+
+
+
+# elif number == guess_me:
+#     print("found it")
+#     break
+# else:
+#     print("oops")
+#     break
