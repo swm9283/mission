@@ -1,43 +1,52 @@
-#7장
-#문제 7.1
-years_list = list(range(1999,2005))
-#문제 7.2
-print(years_list[2])
-#문제 7.3
-print(years_list[-1])
-#문제 7.8
-surprise = ["Groucho","Chico","Harpo"]
-#문제 7.9
-surprise[-1] = surprise[-1].lower()
-# 첫 번째 방식.
-# surprise_harpo_list=list(surprise[-1])
-# surprise_harpo_list.reverse()
-# surprise_harpo_string = "".join(surprise_harpo_list).title()
-# surprise[-1] = surprise_harpo_string
-# print(surprise)
+#8장
+#문제 8.1
+e2f = {"dog": "chien","cat": "chat","walrus": "morse"}
+print(e2f)
 
-#두 번째 방식
-# surprise[-1] = surprise[-1].lower()
-# surprise[-1] = surprise[-1][::-1].title()
-# print(surprise)
+#문제 8.2
+print(e2f["walrus"])
 
-#세 번째 방식
-surprise[-1] = surprise[-1].lower()
-surprise_reverse = " "
-for i in  surprise[-1]:
-    surprise_reverse = i + surprise_reverse
-surprise[-1] = surprise_reverse.title()
-print(surprise)
+#문제 8.3
+# temp = list(e2f.items()) #길이가 3
+# for i in range(0,3):
+#     temp[i] = list(temp[i])
+# # print(temp)
+# for i in range(0,3):
+#     temp[i][0], temp[i][1] = temp[i][1],temp[i][0]
+# f2e = dict(temp)
+# print(f2e)
 
-#문제 7.10
-even_list = [even for even in range(11) if even % 2 ==0]
-print(even_list)
+# e2f = {"dog": "chien","cat": "chat","walrus": "morse"}
+# f2e = {}
+# for e2f_key,e2f_value in e2f.items():
+#     f2e[e2f_value] = e2f_key
+# print(f2e)
 
-#문제 7.11
-start1 = ["fee","fie","foe"]
-rhymes = [("flop", "get a mop"),("fope","turn the rope"),("fa","get your ma"),("fudge","call the judge"),("fat","pet the cat"),
-          ("fog","walk the dog"),("fun","say we're done")]
-start2 = "Someone better"
-for i in range(len(rhymes)):
-    print(f"{start1[0].title()}! {start1[1].title()}! {start1[2].title()}! {rhymes[i][0].title()}!")
-    print(f"{start2} \t {rhymes[i][1]}.")
+#comprehension
+f2e = {a:b for b,a in e2f.items()}
+
+#문제 8.4
+key = list(f2e.keys())
+print(key[0])
+
+#문제 8.5
+print(e2f.keys())
+#문제 8.6
+life = {"animals": {"cats": "Henri","octopi": "Grumpy","emus": "Lucy"},"plants": {}, "other": {}}
+#문제 8.7
+print(life.keys())
+
+#문제 8.8
+print(life["animals"])
+
+#문제 8.9
+print(life["animals"]["cats"])
+
+#문제 8.10
+squares = { i: i**2 for i in range(10)}
+print(squares)
+
+
+
+
+
