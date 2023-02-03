@@ -5,7 +5,13 @@ pokemons= [["피카츄", 200], ["파이리", 100], ["꼬부기", 90], ["거북�
 def add_friends(data):
     len_pokemons = len(pokemons)
     pokemons.append(data)
-    for i in range(len_pokemons-1,-1,-1):
+    count = 0
+    for i in range(0, len(pokemons), 1):
+        if data[0] in pokemons[i][0]:
+            count = count + 1
+    data[0] = f"{data[0]}{count} "
+
+    for i in range(len_pokemons-1,-1,-1):  # 끝에서부터 0번째까지 하나씩 빼면서 비교한다.
         if data[1] >= pokemons[i][1]:
             pokemons[i + 1] = pokemons[i]
             pokemons[i] = data
@@ -16,6 +22,8 @@ def question():
     number = int(input("포켓몬의 체력을 입력하세요. : "))
     data = [name,number]
     return data
+
+
 if __name__ == "__main__":
     pokemons = [["피카츄", 200], ["파이리", 100], ["꼬부기", 90], ["거북왕", 30], ["망나뇽", 15]]
     while True:
